@@ -53,11 +53,11 @@ const Hero = () => {
           </div>
 
           <div className="relative animate-scale-in">
-            <div className="absolute inset-0 bg-gradient-primary opacity-20 blur-3xl rounded-full" />
+            <div className="absolute inset-0 bg-gradient-primary opacity-10 blur-3xl rounded-full" />
             <img
               src={heroIllustration}
               alt="Document automation visualization"
-              className="relative rounded-2xl shadow-elegant animate-float"
+              className="relative rounded-2xl opacity-80"
             />
           </div>
         </div>
