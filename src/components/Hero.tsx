@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles, FileText, CheckCircle2, Clock } from "lucide-react";
+import { ArrowRight, Sparkles, FileText, CheckCircle2, Clock, Zap, Users, Shield } from "lucide-react";
 import heroIllustration from "@/assets/hero-illustration.jpg";
 
 const Hero = () => {
@@ -61,26 +61,60 @@ const Hero = () => {
               className="relative rounded-2xl opacity-80"
             />
             
-            {/* Floating document cards */}
-            <div className="absolute top-8 left-8 bg-background/90 backdrop-blur-sm border border-border rounded-xl p-4 shadow-elegant animate-float">
+            {/* Floating document cards - strategically positioned */}
+            
+            {/* Top left - Processing status */}
+            <div className="absolute top-4 left-4 bg-background/95 backdrop-blur-md border border-border rounded-xl p-4 shadow-elegant animate-float">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-lg bg-gradient-primary flex items-center justify-center">
                   <FileText className="w-5 h-5 text-primary-foreground" />
                 </div>
                 <div>
-                  <div className="text-sm font-medium text-foreground">Contract.pdf</div>
-                  <div className="text-xs text-muted-foreground">Processing...</div>
+                  <div className="text-sm font-semibold text-foreground">Auto-filling...</div>
+                  <div className="text-xs text-muted-foreground">Contract.pdf</div>
                 </div>
               </div>
             </div>
 
-            <div className="absolute bottom-8 right-8 bg-background/90 backdrop-blur-sm border border-border rounded-xl p-4 shadow-elegant animate-float" style={{ animationDelay: '0.5s' }}>
+            {/* Top right - Time savings */}
+            <div className="absolute top-4 right-4 bg-background/95 backdrop-blur-md border border-accent/30 rounded-xl p-4 shadow-elegant animate-float" style={{ animationDelay: '0.3s' }}>
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-lg bg-accent/20 flex items-center justify-center">
+                  <Zap className="w-5 h-5 text-accent" />
+                </div>
+                <div>
+                  <div className="text-sm font-semibold text-foreground">10hrs saved</div>
+                  <div className="text-xs text-muted-foreground">This week</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Middle right - Team collaboration */}
+            <div className="absolute top-1/2 right-0 -translate-y-1/2 bg-background/95 backdrop-blur-md border border-border rounded-xl p-3 shadow-elegant animate-float" style={{ animationDelay: '0.6s' }}>
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <Users className="w-4 h-4 text-primary" />
+                </div>
+                <div className="text-xs font-medium text-foreground">5 team members</div>
+              </div>
+            </div>
+
+            {/* Bottom left - Security badge */}
+            <div className="absolute bottom-4 left-4 bg-background/95 backdrop-blur-md border border-border rounded-xl p-3 shadow-elegant animate-float" style={{ animationDelay: '0.9s' }}>
+              <div className="flex items-center gap-2">
+                <Shield className="w-4 h-4 text-accent" />
+                <div className="text-xs font-semibold text-foreground">SOC 2 Certified</div>
+              </div>
+            </div>
+
+            {/* Bottom right - Success completion */}
+            <div className="absolute bottom-4 right-4 bg-background/95 backdrop-blur-md border border-border rounded-xl p-4 shadow-elegant animate-float" style={{ animationDelay: '0.5s' }}>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-lg bg-accent/20 flex items-center justify-center">
                   <CheckCircle2 className="w-5 h-5 text-accent" />
                 </div>
                 <div>
-                  <div className="text-sm font-medium text-foreground">Invoice filled</div>
+                  <div className="text-sm font-semibold text-foreground">Completed</div>
                   <div className="text-xs text-muted-foreground flex items-center gap-1">
                     <Clock className="w-3 h-3" />
                     2.3s
