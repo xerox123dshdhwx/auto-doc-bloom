@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles, FileText, CheckCircle2, Clock } from "lucide-react";
 import heroIllustration from "@/assets/hero-illustration.jpg";
 
 const Hero = () => {
@@ -53,12 +53,41 @@ const Hero = () => {
           </div>
 
           <div className="relative animate-scale-in">
+            {/* Background image */}
             <div className="absolute inset-0 bg-gradient-primary opacity-10 blur-3xl rounded-full" />
             <img
               src={heroIllustration}
               alt="Document automation visualization"
               className="relative rounded-2xl opacity-80"
             />
+            
+            {/* Floating document cards */}
+            <div className="absolute top-8 left-8 bg-background/90 backdrop-blur-sm border border-border rounded-xl p-4 shadow-elegant animate-float">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-lg bg-gradient-primary flex items-center justify-center">
+                  <FileText className="w-5 h-5 text-primary-foreground" />
+                </div>
+                <div>
+                  <div className="text-sm font-medium text-foreground">Contract.pdf</div>
+                  <div className="text-xs text-muted-foreground">Processing...</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="absolute bottom-8 right-8 bg-background/90 backdrop-blur-sm border border-border rounded-xl p-4 shadow-elegant animate-float" style={{ animationDelay: '0.5s' }}>
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-lg bg-accent/20 flex items-center justify-center">
+                  <CheckCircle2 className="w-5 h-5 text-accent" />
+                </div>
+                <div>
+                  <div className="text-sm font-medium text-foreground">Invoice filled</div>
+                  <div className="text-xs text-muted-foreground flex items-center gap-1">
+                    <Clock className="w-3 h-3" />
+                    2.3s
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
