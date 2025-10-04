@@ -61,10 +61,10 @@ const Hero = () => {
               className="relative rounded-2xl opacity-80"
             />
             
-            {/* Floating document cards - strategically positioned */}
+            {/* Floating cards - evenly distributed around perimeter */}
             
-            {/* Top left - Processing status */}
-            <div className="absolute top-4 left-4 bg-background/95 backdrop-blur-md border border-border rounded-xl p-4 shadow-elegant animate-float">
+            {/* Top center - Processing status */}
+            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-background/95 backdrop-blur-md border border-border rounded-xl p-4 shadow-elegant animate-float">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-lg bg-gradient-primary flex items-center justify-center">
                   <FileText className="w-5 h-5 text-primary-foreground" />
@@ -76,8 +76,8 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* Top right - Time savings */}
-            <div className="absolute top-4 right-4 bg-background/95 backdrop-blur-md border border-accent/30 rounded-xl p-4 shadow-elegant animate-float" style={{ animationDelay: '0.3s' }}>
+            {/* Right center - Time savings */}
+            <div className="absolute top-1/2 -right-4 -translate-y-1/2 bg-background/95 backdrop-blur-md border border-accent/30 rounded-xl p-4 shadow-elegant animate-float" style={{ animationDelay: '0.2s' }}>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-lg bg-accent/20 flex items-center justify-center">
                   <Zap className="w-5 h-5 text-accent" />
@@ -89,26 +89,8 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* Middle right - Team collaboration */}
-            <div className="absolute top-1/2 right-0 -translate-y-1/2 bg-background/95 backdrop-blur-md border border-border rounded-xl p-3 shadow-elegant animate-float" style={{ animationDelay: '0.6s' }}>
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <Users className="w-4 h-4 text-primary" />
-                </div>
-                <div className="text-xs font-medium text-foreground">5 team members</div>
-              </div>
-            </div>
-
-            {/* Bottom left - Security badge */}
-            <div className="absolute bottom-4 left-4 bg-background/95 backdrop-blur-md border border-border rounded-xl p-3 shadow-elegant animate-float" style={{ animationDelay: '0.9s' }}>
-              <div className="flex items-center gap-2">
-                <Shield className="w-4 h-4 text-accent" />
-                <div className="text-xs font-semibold text-foreground">SOC 2 Certified</div>
-              </div>
-            </div>
-
             {/* Bottom right - Success completion */}
-            <div className="absolute bottom-4 right-4 bg-background/95 backdrop-blur-md border border-border rounded-xl p-4 shadow-elegant animate-float" style={{ animationDelay: '0.5s' }}>
+            <div className="absolute -bottom-4 right-8 bg-background/95 backdrop-blur-md border border-border rounded-xl p-4 shadow-elegant animate-float" style={{ animationDelay: '0.4s' }}>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-lg bg-accent/20 flex items-center justify-center">
                   <CheckCircle2 className="w-5 h-5 text-accent" />
@@ -120,6 +102,24 @@ const Hero = () => {
                     2.3s
                   </div>
                 </div>
+              </div>
+            </div>
+
+            {/* Bottom left - Security badge */}
+            <div className="absolute -bottom-4 left-8 bg-background/95 backdrop-blur-md border border-border rounded-xl p-3 shadow-elegant animate-float" style={{ animationDelay: '0.6s' }}>
+              <div className="flex items-center gap-2">
+                <Shield className="w-4 h-4 text-accent" />
+                <div className="text-xs font-semibold text-foreground">SOC 2 Certified</div>
+              </div>
+            </div>
+
+            {/* Left center - Team collaboration */}
+            <div className="absolute top-1/2 -left-4 -translate-y-1/2 bg-background/95 backdrop-blur-md border border-border rounded-xl p-3 shadow-elegant animate-float" style={{ animationDelay: '0.8s' }}>
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <Users className="w-4 h-4 text-primary" />
+                </div>
+                <div className="text-xs font-medium text-foreground">5 team members</div>
               </div>
             </div>
           </div>
